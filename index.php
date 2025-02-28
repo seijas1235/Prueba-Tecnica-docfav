@@ -13,10 +13,10 @@ $paths = [__DIR__ . '/src/Domain/Entity'];
 $isDevMode = true;
 $dbParams = [
     'driver' => 'pdo_mysql',
-    'host' => '172.27.192.1', // Si falla, usa la IP de Windows
-    'port' => '3307',
-    'user' => 'root', // Cambia por tu usuario
-    'password' => 'sebas', // Cambia por tu contraseña
+    'host' => 'db',
+    'port' => '3306',
+    'user' => 'root',
+    'password' => 'sebas',
     'dbname' => 'user_registration',
 ];
 

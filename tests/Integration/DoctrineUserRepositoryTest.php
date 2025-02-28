@@ -28,8 +28,8 @@ class DoctrineUserRepositoryTest extends TestCase
         );
         $dbParams = [
             'driver' => 'pdo_mysql',
-            'host' => 'localhost', // Tu IP de Windows
-            'port' => '3307',
+            'host' => 'db',
+            'port' => '3306',
             'user' => 'root',
             'password' => 'sebas',
             'dbname' => 'user_registration',

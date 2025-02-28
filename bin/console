@@ -12,8 +12,8 @@ $isDevMode = true;
 
 $dbParams = [
     'driver' => 'pdo_mysql',
-    'host' => '172.27.192.1', // o la IP de Windows si aplica
-    'port' => '3307',
+    'host' => 'db', // Nombre del servicio en docker-compose
+    'port' => '3306', // Puerto interno de MySQL en Docker
     'user' => 'root',
     'password' => 'sebas',
     'dbname' => 'user_registration',
