@@ -18,12 +18,14 @@ class RegisterUserUseCase
     private UserRepositoryInterface $userRepository;
     private array $eventListeners;
 
+    // Inyecta dependencias para desacoplar persistencia y eventos
     public function __construct(UserRepositoryInterface $userRepository, array $eventListeners = [])
     {
         $this->userRepository = $userRepository;
         $this->eventListeners = $eventListeners;
     }
 
+    // Registra un usuario y dispara evento de dominio
     public function execute(RegisterUserRequest $request): UserResponseDTO
     {
         $email = new Email($request->email);

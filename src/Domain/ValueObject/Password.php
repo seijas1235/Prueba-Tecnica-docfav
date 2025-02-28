@@ -8,6 +8,7 @@ class Password
 {
     private string $hashedPassword;
 
+    // Valida y hashea la contraseña segun politica de seguridad
     public function __construct(string $plainPassword)
     {
         if (!$this->isValid($plainPassword)) {
@@ -16,6 +17,7 @@ class Password
         $this->hashedPassword = password_hash($plainPassword, PASSWORD_BCRYPT);
     }
 
+    // Permite crear instancia desde un hash existente (para Doctrine)
     public static function fromHash(string $hashedPassword): self
     {
         $instance = new self('dummy'); // Constructor dummy para evitar validación

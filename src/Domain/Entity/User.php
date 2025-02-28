@@ -41,6 +41,7 @@ class User
      */
     private DateTimeImmutable $createdAt;
 
+    // Crea una entidad User immutable con datos validados
     public function __construct(UserId $id, Name $name, Email $email, Password $password)
     {
         $this->id = $id;
@@ -49,7 +50,7 @@ class User
         $this->password = $password->value();
         $this->createdAt = new DateTimeImmutable();
     }
-
+    // ... getters ...
     public function id(): UserId
     {
         return $this->id;
